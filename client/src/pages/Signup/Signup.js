@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from '../../firebase/firebase';
+import Navbar from "../../components/Navbar/Navbar"
 import "./Signup.css"
 const Signup = () => {
   const navigate = useNavigate();
@@ -31,6 +32,8 @@ const Signup = () => {
   }
 
   return (
+    <>
+    <Navbar />
     <div className='sMain'>
       <form>
         <div>
@@ -77,6 +80,7 @@ const Signup = () => {
         </NavLink>
       </p>
     </div>
+    </>
   )
 }
 
