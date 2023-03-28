@@ -11,7 +11,7 @@ const Landing = () => {
         <h1>A Realistic Interview <span>Experience.</span></h1>
       </div>
       <div className='lhalf'>
-      <Link class="button-28" to="/signup">Get Started</Link>
+      <Link className="button-28" to="/login">Get Started</Link>
       </div>
     </div>
     </>

@@ -4,7 +4,9 @@ const Navbar2 = () => {
   return (
     <div className='navbar2'>
       <div className="nav-con-1"></div>
-      <div className="nav-con-2"></div>
+      <div className="nav-con-2">
+        
+      </div>
     </div>
   )
 }

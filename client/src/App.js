@@ -1,23 +1,23 @@
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import {  Routes, Route } from "react-router-dom";
+import { AuthContextProvider } from "./context/AuthContext";
+import Protected from "./firebase/Protected";
 import Home from "./pages/Home/Home";
 import Landing from "./pages/Landing/Landing";
 import Login from "./pages/Login/Login";
-import Signup from "./pages/Signup/Signup";
+
 
 export default function App() {
-  return (<>
-    <BrowserRouter>
+  return (<div>
+  <AuthContextProvider>
+
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/signup" element={<Signup />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/home" element={<Protected><Home /></Protected>} />
       </Routes>
-    </BrowserRouter>
-  </>
+  </AuthContextProvider>
+  </div>
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<App />);
