@@ -1,5 +1,73 @@
 .home-container{
+    padding: 15px;
     width: 100vw;
-    height: 90vh;
-    background: #bb3b0e;
+    min-height: 90vh;
+    height: max-content;
+    background: white;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.reccs{
+    width: 100%;
+    height: 45vh;
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card-container{
+    width: 100%;
+    height: 85%;
+    background-color:#EFEBE9;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.interview-container{
+    width: 100vw;
+    min-height: 50vh;
+    height: max-content;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.search-interview{
+    width: 40%;
+    height: 80px;
+    background-color:#EFEBE9;
+    border-radius: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+.search-interview select{
+    width: 25%;
+    text-align: center;
+    height: 35%;
+    font-size: 14px;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    font-weight: 500;
+}
+.search-interview button{
+    width: 15%;
+    height: 35%;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+.search-interview button:hover{
+    cursor: pointer;
+    color: white;
+    background-color: black;
 }

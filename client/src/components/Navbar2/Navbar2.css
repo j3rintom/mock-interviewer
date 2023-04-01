@@ -1,18 +1,49 @@
-.navbar2{
+@import url('https://fonts.googleapis.com/css2?family=Kodchasan:wght@700&family=Lexend&display=swap');
+
+.navbar2 {
+    font-family: 'Kodchasan', sans-serif;
+    font-family: 'Lexend', sans-serif;
     width: 100vw;
     height: 10vh;
-    background: #bb3b0e;
+    background: #d8c593;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.nav-con-1{
-height: 100%;
-background: #000;
-width: 50%;
+
+.nav-con-1 {
+    height: 100%;
+    /* background: #000; */
+    width: 50%;
 }
-.nav-con-2{
-height: 100%;
-background: white;
-width: 50%;
+
+.nav-con-2 {
+    height: 100%;
+    /* background: white; */
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.nav-con-2 ul {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+
+}
+
+.nav-con-2 a {
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.nav-con-2 a.active {
+    color: #000;
 }
