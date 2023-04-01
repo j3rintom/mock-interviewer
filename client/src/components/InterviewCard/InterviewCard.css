@@ -1,0 +1,39 @@
+.interview-card{
+    width: 80vw;
+    height: 8vh;
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.interview-header{
+    width: 90vw;
+    padding: 10px;
+    border-bottom: 5px solid #d8c593;
+    /* height: 15vh; */
+    
+}
+.interview-card h2{
+    font-size: 1.1rem;
+}
+.interview-card button{
+    width: 100px;
+    height: 30px;
+    border: 0;
+    border-radius: 4px;
+    background-color: #d8c593;
+    color: white;
+    padding: 4px;
+    text-align: center;
+}
+
+.interview-card button:hover{
+    cursor: pointer;
+    background-color: #a7925c;
+}
