@@ -22,7 +22,7 @@
 .interview-card h2{
     font-size: 1.1rem;
 }
-.interview-card button{
+.interview-card a{
     width: 100px;
     height: 30px;
     border: 0;
@@ -33,7 +33,7 @@
     text-align: center;
 }
 
-.interview-card button:hover{
+.interview-card a:hover{
     cursor: pointer;
     background-color: #a7925c;
 }

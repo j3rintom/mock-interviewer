@@ -1,16 +1,47 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Card from '../../components/Card/Card'
 import Navbar2 from '../../components/Navbar2/Navbar2'
 import InterviewCard from "../../components/InterviewCard/InterviewCard"
+import axios from "axios"
 import "./Home.css"
 const Home = () => {
   const [company, setCompany] = useState("")
   const [role, setRole] = useState("")
   const [interviews, setInterviews] = useState([])
-  const handleSearch = () => {
-    // filter interviews
-    console.log(company, role);
+  const [interviewData, setInterviewData] = useState([])
+  const [interviewList,setInterviewList] = useState([])
+  
+  const handleSearch = (e) => {
+    console.log(interviewList);
+    if(company!=="" && role!==""){
+      const newData = interviewList.filter(i=>i.company===company && i.role===role)
+      setInterviews(newData)
+    }
+    else if(company!==""){
+      const newData = interviewList.filter(i=>i.company===company)
+      setInterviews(newData)
+    }
+    else if(role!==""){
+      const newData = interviewList.filter(i=> i.role===role)
+      setInterviews(newData)
+    }
+    
+    console.log(interviews);
   }
+  useEffect(() => {
+
+    axios.get('http://localhost:5000/interview')
+      .then(response => {
+        setInterviewData(response.data)
+        setInterviewList(response.data)
+        setInterviews(response.data)
+      })
+      .catch(error => {
+        console.log(error);
+      });
+    
+  }, [])
+  
   return (
     <>
       <Navbar2 />
@@ -29,26 +60,36 @@ const Home = () => {
           <div className='search-interview'>
             <select placeholder='Company' onChange={(e) => setCompany(e.target.value)}>
               <option value="" disabled="disabled" selected="selected">Company</option>
-              <option >Google</option>
-              <option>Google</option>
-              <option>Google</option>
+              {
+                interviewData.map((element) => {
+                  return <option key={element._id} value={element.company}>{element.company}</option>
+                })
+              }
             </select>
             <select onChange={(e) => setRole(e.target.value)}>
               <option value="" disabled="disabled" selected="selected">Role</option>
-              <option>Software Developer</option>
-              <option>Software Engineer</option>
-              <option>Analyst</option>
-              <option>Intern</option>
+              {
+                interviewData.map((element) => {
+                  return <option key={element._id} value={element.role}>{element.role}</option>
+                })
+              }
             </select>
             <button onClick={handleSearch}>Search</button>
+            <button onClick={()=> setInterviews(interviewList)}>Reset</button>
           </div>
           <div className='interview-list'>
             <div className="interview-header">
               <h3>Available Interviews</h3>
             </div>
             {
-              interviews == [] ? <><InterviewCard company="Company" role="Role" />
-              <InterviewCard company="Company" role="Role" /> </>: <h2>No Matching Interviews</h2>
+
+              interviews.length !==0 ? <>
+                {
+                  interviews.map((element) => {
+                    return <InterviewCard key={element._id} data={element} />
+                  })
+                }
+              </> : <h2>No Matching Interviews</h2>
             }
           </div>
         </div>

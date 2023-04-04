@@ -1,12 +1,13 @@
 import "./InterviewCard.css"
 import React from 'react'
 import NorthEastIcon from '@mui/icons-material/NorthEast';
-const InterviewCard = ({company,role}) => {
+import { Link } from "react-router-dom";
+const InterviewCard = ({data}) => {
   return (
     <div className="interview-card">
-      <h2>{company}</h2>
-      <h2>{role}</h2>
-      <button><NorthEastIcon /></button>
+      <h2>{data.company}</h2>
+      <h2>{data.role}</h2>
+      <Link to={`/${data._id}`}><NorthEastIcon /></Link>
     </div>
   )
 }
