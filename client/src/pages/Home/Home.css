@@ -91,3 +91,11 @@
     gap: 30px;
 
 }
+
+/* mobile view */
+
+/* Media query for mobile view */
+@media (max-width: 767px) {
+    
+  }
+  

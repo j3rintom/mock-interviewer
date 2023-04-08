@@ -4,13 +4,15 @@ import Navbar2 from '../../components/Navbar2/Navbar2'
 import InterviewCard from "../../components/InterviewCard/InterviewCard"
 import axios from "axios"
 import "./Home.css"
+import LoadingComponent from '../../components/LoadingComponent/LoadingComponent'
+import Footer from '../../components/Footer/Footer'
 const Home = () => {
   const [company, setCompany] = useState("")
   const [role, setRole] = useState("")
   const [interviews, setInterviews] = useState([])
   const [interviewData, setInterviewData] = useState([])
   const [interviewList,setInterviewList] = useState([])
-  
+  const [loading,setLoading] = useState(true)
   const handleSearch = (e) => {
     console.log(interviewList);
     if(company!=="" && role!==""){
@@ -35,6 +37,7 @@ const Home = () => {
         setInterviewData(response.data)
         setInterviewList(response.data)
         setInterviews(response.data)
+        setLoading(false)
       })
       .catch(error => {
         console.log(error);
@@ -82,7 +85,7 @@ const Home = () => {
               <h3>Available Interviews</h3>
             </div>
             {
-
+              loading?<LoadingComponent />:
               interviews.length !==0 ? <>
                 {
                   interviews.map((element) => {
@@ -94,6 +97,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   )
 }

@@ -11,19 +11,26 @@
     width: 100vw;
     display: flex;
     align-items: center;
-    justify-content:space-between;
+    justify-content:right;
+    gap: 20px;
     height: 10vh;
     padding: 5px;
 }
 .logout-container button{
     margin: 20px;
 }
+.logout-container img{
+  height: 50px;
+  width: auto;
+  border-radius: 50% 50%;
+}
 
-.logout-container h2{
-  width: 15%;
+.profile-container h2{
+  width: 75%;
   font-weight: 700;
   border-bottom: 5px solid #d8c593;
   padding: 5px;
+  font-size: 1.9rem;
 }
 /* CSS */
 .button-24 {
@@ -62,23 +69,16 @@
   opacity: .5;
 }
 .user-info{
-  width: 25%;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 80%;
+  height: 50vh;
   background: rgba( 255, 255, 255, 0.25 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
   backdrop-filter: blur( 4px );
   -webkit-backdrop-filter: blur( 4px );
   border-radius: 10px;
   border: 1px solid rgba( 255, 255, 255, 0.18 );
-  justify-content: center;
-  gap: 20px;
-}
-.user-info img{
-  width: 30%;
-  height: auto;
-  border-radius: 50% 50%;
-  border: 1px solid #EFEBE9;
+  display: flex;
+  /* align-items: center; */
+  flex-direction: column;
+  padding: 20px;
 }
