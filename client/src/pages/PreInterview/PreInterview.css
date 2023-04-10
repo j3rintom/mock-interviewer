@@ -1,0 +1,69 @@
+.pre-container{
+    width: 100vw;
+    height: 100vh;
+    background: #000;
+    color: white;
+    overflow-y: hidden;
+}
+.pre-header{
+    width: 100vw;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.pre-header h1{
+    font-size: 3.9rem;
+}
+
+.pre-content{
+    width: 100vw;
+    height: 70vh;
+    background: white;
+    color:#000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.interview-det{
+    padding-left: 30px;
+    width: 100vw;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.interview-det h1{
+    width: 60%;
+    border-bottom: 3px solid black;
+}
+.pre-instructions{
+    width: 100vw;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
+.pre-instructions h1{
+    border-bottom: 2px solid black;
+    margin-bottom: 10px;
+}
+.pre-instructions p{
+    line-height: 420%;
+    font-size: 1.2rem;
+    
+}
+.int-start-cont{
+    width: 100vw;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.int-start-cont a{
+    color:black;
+    
+    
+}

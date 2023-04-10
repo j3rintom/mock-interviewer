@@ -8,6 +8,7 @@ import Login from "./pages/Login/Login";
 import Profile from "./pages/Profile/Profile";
 import Evaluation from "./pages/Evaluation/Evaluation";
 import PreInterview from "./pages/PreInterview/PreInterview"
+import Interview from "./pages/Interview/Interview"
 
 export default function App() {
   return (<div>
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/evaluation" element={<Protected><Evaluation /></Protected>} />
         <Route path="/profile" element={<Protected><Profile /></Protected>} />
         <Route path='/interview/:id' element={<Protected><PreInterview /></Protected>} />
+        <Route path='/interview/:id/start' element={<Protected><Interview /></Protected>} />
       </Routes>
   </AuthContextProvider>
   </div>

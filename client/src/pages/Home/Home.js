@@ -61,7 +61,7 @@ const Home = () => {
         </div>
         <div className='interview-container'>
           <div className='search-interview'>
-            <select placeholder='Company' onChange={(e) => setCompany(e.target.value)}>
+            <select onChange={(e) => setCompany(e.target.value)}>
               <option value="" disabled="disabled" selected="selected">Company</option>
               {
                 interviewData.map((element) => {
@@ -78,7 +78,10 @@ const Home = () => {
               }
             </select>
             <button onClick={handleSearch}>Search</button>
-            <button onClick={()=> setInterviews(interviewList)}>Reset</button>
+            <button onClick={()=> {
+              setInterviews(interviewList)
+            }
+          }>Reset</button>
           </div>
           <div className='interview-list'>
             <div className="interview-header">

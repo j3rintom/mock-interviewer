@@ -4,11 +4,13 @@ import "./Evaluation.css"
 import Footer from '../../components/Footer/Footer'
 const Evaluation = () => {
   return (
-    <div>
+    <>
       <Navbar2 />
-      Evaluation
+      <div className='evaluation-container'>
+        
+      </div>
       <Footer />
-    </div>
+    </>
   )
 }
 
