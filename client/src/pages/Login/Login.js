@@ -1,6 +1,5 @@
 import React, {useEffect} from 'react';
 import {  useNavigate } from 'react-router-dom'
-// import Navbar from "../../components/Navbar/Navbar"
 import {GoogleButton} from "react-google-button"
 import { UserAuth} from '../../context/AuthContext';
 import "./Login.css"
@@ -15,10 +14,13 @@ const Login = () => {
         }
     }
     useEffect(()=>{
+        document.title = 'Login'
+      },[])
+    useEffect(()=>{
         if(user != null){
             navigate('/home')
         }
-    },[user])
+    },[user,navigate])
     return(
         <>
         <div className='login-container'>

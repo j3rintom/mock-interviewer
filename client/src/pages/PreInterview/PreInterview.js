@@ -8,12 +8,13 @@ const PreInterview = () => {
   const [details, setDetails] = useState({})
   const [loading, setLoading] = useState(true)
   useEffect(() => {
+    document.title = 'Instructions'
     axios.get(`http://localhost:5000/interview/${id}`)
       .then(response => {
         setDetails(response.data)
         setLoading(false)
       })
-  }, [])
+  }, [id])
   return (
     <>
       {

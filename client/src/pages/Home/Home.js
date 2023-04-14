@@ -31,7 +31,7 @@ const Home = () => {
     console.log(interviews);
   }
   useEffect(() => {
-
+    document.title = 'Home'
     axios.get('http://localhost:5000/interview')
       .then(response => {
         setInterviewData(response.data)
