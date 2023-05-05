@@ -4,7 +4,7 @@ import Navbar from "../../components/Navbar/Navbar"
 import { Link } from "react-router-dom";
 const Landing = () => {
   useEffect(()=>{
-    document.title = 'Mock Interviewer'
+    document.title = 'Eira - A Mock Interviewer'
   },[])
   return (
     <>

@@ -1,5 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Kodchasan:wght@700&display=swap');
 .navbar{
     width: 100vw;
     height: 10vh;
     background: #bb3b0e;
+    display: flex;
+    color: #EEE;
+    align-items: center;
+    padding-left: 50px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    font-family: 'Bruno Ace', cursive;
+font-family: 'Kodchasan', sans-serif;
 }

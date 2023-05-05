@@ -13,6 +13,14 @@
 
 .nav-con-1 {
     height: 100%;
+    color: #EEE;
+    padding-left: 50px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    font-family: 'Bruno Ace', cursive;
+font-family: 'Kodchasan', sans-serif;
+display: flex;
+align-items: center;
     /* background: #000; */
     width: 50%;
 }

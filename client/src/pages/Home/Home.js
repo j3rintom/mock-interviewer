@@ -52,11 +52,7 @@ const Home = () => {
         <div className='reccs'>
           <h4>Popular Interviews</h4>
           <div className='card-container'>
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {interviewData.map((d)=> <Card data={d} />)}
           </div>
         </div>
         <div className='interview-container'>
@@ -95,7 +91,7 @@ const Home = () => {
                     return <InterviewCard key={element._id} data={element} />
                   })
                 }
-              </> : <h2>No Matching Interviews</h2>
+              </> : <h2>No Available Interviews</h2>
             }
           </div>
         </div>

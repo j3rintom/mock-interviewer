@@ -1,6 +1,6 @@
 .profile-container{
     width: 100vw;
-    height: 90vh;
+    height: 85vh;
     /* height: max-content; */
     display: flex;
     flex-direction: column;
