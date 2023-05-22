@@ -7,7 +7,6 @@ const InterviewCard = ({data}) => {
     <div className="interview-card">
       <h2>{data.company}</h2>
       <h2>{data.role}</h2>
-      {console.log(data)}
       <Link to={`/interview/${data._id}`}><NorthEastIcon /></Link>
     </div>
   )

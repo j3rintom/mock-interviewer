@@ -43,7 +43,7 @@ const Home = () => {
         console.log(error);
       });
     
-  }, [])
+  }, [interviewData])
   
   return (
     <>
@@ -52,7 +52,7 @@ const Home = () => {
         <div className='reccs'>
           <h4>Popular Interviews</h4>
           <div className='card-container'>
-            {interviewData.map((d)=> <Card data={d} />)}
+            {loading?<LoadingComponent />:interviews.length!==0?interviewData.map((d)=> <Card data={d} />):<h2>No Available Interviews</h2>}
           </div>
         </div>
         <div className='interview-container'>
