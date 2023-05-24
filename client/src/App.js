@@ -9,6 +9,7 @@ import Profile from "./pages/Profile/Profile";
 import Evaluation from "./pages/Evaluation/Evaluation";
 import PreInterview from "./pages/PreInterview/PreInterview"
 import Interview from "./pages/Interview/Interview"
+import Finish from "./pages/Finish/Finish";
 
 export default function App() {
   return (<div>
@@ -22,6 +23,7 @@ export default function App() {
         <Route path="/profile" element={<Protected><Profile /></Protected>} />
         <Route path='/interview/:id' element={<Protected><PreInterview /></Protected>} />
         <Route path='/interview/:id/start' element={<Protected><Interview /></Protected>} />
+        <Route path='/interview/:id/finish' element={<Protected><Finish /></Protected>} />
       </Routes>
   </AuthContextProvider>
   </div>
