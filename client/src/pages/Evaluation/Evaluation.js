@@ -5,11 +5,11 @@ import './Evaluation.css';
 import axios from 'axios';
 import Footer from '../../components/Footer/Footer';
 import UserIterview from '../../components/UserInterview/UserInterview';
+import LoadingComponent from '../../components/LoadingComponent/LoadingComponent';
 
 const Evaluation = () => {
   const { user } = UserAuth();
   const [interviews, setInterviews] = useState(null);
-
   useEffect(() => {
     document.title = 'Evaluation';
   }, []);
@@ -34,7 +34,7 @@ const Evaluation = () => {
       <Navbar2 />
       <div className="evaluation-container">
         {interviews === null ? (
-          <h1>Loading</h1>
+          <h2>No History of Previous Interviews</h2>
         ) : (
           interviews.map((interview, index) => (
             <UserIterview key={index} interview={interview}/>

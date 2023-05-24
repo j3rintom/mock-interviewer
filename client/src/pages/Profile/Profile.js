@@ -13,6 +13,7 @@ const Profile = () => {
   const {logout,user}  = UserAuth()
   const [loading,setLoading] = useState(true)
   const [userData,setUserData] = useState([])
+  const [interviewCount,setInterviewCount] = useState(0)
   const handleLogout = async ()=>{
       try {
         await logout();
@@ -35,6 +36,11 @@ useEffect(()=>{
     console.log(err);
   })
   document.title = 'Profile'
+},[user.uid])
+useEffect(()=>{
+  axios.get(`http://localhost:5000/userInterview/${user.uid}`).then((response)=>{
+    setInterviewCount(response.data.length)
+  })
 },[user.uid])
   return (
     <>
@@ -59,7 +65,7 @@ useEffect(()=>{
               <div className='stats'>
                 <h1>Interview Count</h1>
                 <div className='circle-card'>
-                  {!loading&& userData?<h4>{userData.interviews.length}</h4>:<LoadingComponent />}
+                  {!loading&& userData?<h4>{interviewCount}</h4>:<LoadingComponent />}
                 </div>
               </div>
             </div>
